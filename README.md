@@ -33,3 +33,7 @@ make brain-even
 make brain-calc
 ```
 <a href="https://asciinema.org/a/gHmHwp9S7RIU0bYBvYDXaETPw" target="_blank"><img src="https://asciinema.org/a/gHmHwp9S7RIU0bYBvYDXaETPw.svg" /></a>
+```bash
+make brain-gcd
+```
+<a href="https://asciinema.org/a/OG9q2WTufN71Nf7VocdS4PX54" target="_blank"><img src="https://asciinema.org/a/OG9q2WTufN71Nf7VocdS4PX54.svg" /></a>
