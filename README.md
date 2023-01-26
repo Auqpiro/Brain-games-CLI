@@ -41,3 +41,7 @@ make brain-gcd
 make brain-progression
 ```
 <a href="https://asciinema.org/a/ZNDgbSXLMq7V0KqCuLWNASb3t" target="_blank"><img src="https://asciinema.org/a/ZNDgbSXLMq7V0KqCuLWNASb3t.svg" /></a>
+```bash
+make brain-prime
+```
+<a href="https://asciinema.org/a/jVsgiylFMHJqaRjxzyF5IvTlY" target="_blank"><img src="https://asciinema.org/a/jVsgiylFMHJqaRjxzyF5IvTlY.svg" /></a>
