@@ -5,20 +5,16 @@ import startGame from '../index.js';
 const rule = 'What is the result of the expression?';
 
 function calculateAnswer(firstOperand, secondOperand, operator) {
-  let resultCalculate = 0;
   switch (operator) {
     case '+':
-      resultCalculate = firstOperand + secondOperand;
-      break;
+      return firstOperand + secondOperand;
     case '-':
-      resultCalculate = firstOperand - secondOperand;
-      break;
+      return firstOperand - secondOperand;
     case '*':
-      resultCalculate = firstOperand * secondOperand;
-      break;
+      return firstOperand * secondOperand;
     default:
+      return console.log(`Unknown operator: ${operator}`);
   }
-  return resultCalculate;
 }
 
 function getRound() {
