@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
+import { startGame } from '../index.js';
 
 const rule = 'What number is missing in the progression? ';
 
@@ -22,4 +23,6 @@ function getRound() {
   return [`${arrayProgression.join(' ')}`, correctAnswer];
 }
 
-export { rule, getRound };
+export default function runGame() {
+  return startGame(rule, getRound);
+}

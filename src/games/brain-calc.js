@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
+import { startGame } from '../index.js';
 
 const rule = 'What is the result of the expression?';
 
@@ -29,4 +30,6 @@ function getRound() {
   return [`${firstOperand} ${operator} ${secondOperand}`, correctAnswer];
 }
 
-export { rule, getRound };
+export default function runGame() {
+  return startGame(rule, getRound);
+}

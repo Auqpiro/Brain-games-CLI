@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
+import { startGame } from '../index.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
@@ -25,4 +26,6 @@ function getRound() {
   return [`${firstNumber} ${secondNumber}`, correctAnswer];
 }
 
-export { rule, getRound };
+export default function runGame() {
+  return startGame(rule, getRound);
+}

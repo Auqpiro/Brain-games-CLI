@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rule, getRound } from '../src/games/brain-progression.js';
-import { startGame } from '../src/index.js';
+import runGame from '../src/games/brain-progression.js';
 
-startGame(rule, getRound);
+runGame();

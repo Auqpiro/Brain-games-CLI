@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
-import { boolienToResponse } from '../index.js';
+import { boolienToResponse, startGame } from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -12,4 +12,6 @@ const getRound = () => {
   return [`${ranomNumber}`, correctAnswer];
 };
 
-export { rule, getRound };
+export default function runGame() {
+  return startGame(rule, getRound);
+}

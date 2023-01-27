@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
-import { boolienToResponse } from '../index.js';
+import { boolienToResponse, startGame } from '../index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no". ';
 
@@ -20,4 +20,6 @@ function getRound() {
   return [`${getNumber}`, correctAnswer];
 }
 
-export { rule, getRound };
+export default function runGame() {
+  return startGame(rule, getRound);
+}
