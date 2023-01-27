@@ -13,7 +13,8 @@ function checkRound(current, correct) {
 function startGame(rules, getRound) {
   const userName = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n${rules}`);
-  for (let i = 0; i < 3; i += 1) {
+  const countRound = 3;
+  for (let i = 0; i < countRound; i += 1) {
     const [getQuestion, correctAnswer] = getRound();
     const userAnswer = readlineSync.question(`Question: ${getQuestion}\nYour answer: `);
     const isCorrect = checkRound(userAnswer, correctAnswer.toString());
