@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const boolienToResponse = (Response) => ((Response) ? 'yes' : 'no');
-
 function checkRound(current, correct) {
   if (current === correct) {
     console.log('Correct!');
@@ -27,4 +25,4 @@ function startGame(rules, getRound) {
   console.log(`Congratulations, ${userName}!`);
 }
 
-export { boolienToResponse, startGame };
+export default startGame;

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 import generateRandomNumber from '../RNG.js';
-import { boolienToResponse, startGame } from '../index.js';
+import startGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (number) => number % 2 === 0;
+const isEven = (number) => ((number % 2 === 0) ? 'yes' : 'no');
 
 const getRound = () => {
   const ranomNumber = generateRandomNumber();
-  const correctAnswer = boolienToResponse(isEven(ranomNumber));
+  const correctAnswer = isEven(ranomNumber);
   return [`${ranomNumber}`, correctAnswer];
 };
 
