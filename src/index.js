@@ -1,10 +1,5 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-const generateRandomNumber = (startRange, endRange) => {
-  const min = Math.ceil(startRange);
-  const max = Math.floor(endRange);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
 
 const boolienToResponse = (Response) => ((Response) ? 'yes' : 'no');
 
@@ -32,4 +27,4 @@ function startGame(rules, getRound) {
   console.log(`Congratulations, ${userName}!`);
 }
 
-export { generateRandomNumber, boolienToResponse, startGame };
+export { boolienToResponse, startGame };

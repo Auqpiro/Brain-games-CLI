@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../RNG.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
@@ -19,10 +19,8 @@ const getGCD = (x, y) => {
 };
 
 function getRound() {
-  const startRange = 1;
-  const endRange = 100;
-  const firstNumber = generateRandomNumber(startRange, endRange);
-  const secondNumber = generateRandomNumber(startRange, endRange);
+  const firstNumber = generateRandomNumber();
+  const secondNumber = generateRandomNumber();
   const correctAnswer = getGCD(firstNumber, secondNumber);
   return [`${firstNumber} ${secondNumber}`, correctAnswer];
 }

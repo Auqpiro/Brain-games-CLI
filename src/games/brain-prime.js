@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { generateRandomNumber, boolienToResponse } from '../index.js';
+import generateRandomNumber from '../RNG.js';
+import { boolienToResponse } from '../index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no". ';
 
@@ -14,9 +15,7 @@ function isPrime(number) {
 }
 
 function getRound() {
-  const startRange = 1;
-  const endRange = 100;
-  const getNumber = generateRandomNumber(startRange, endRange);
+  const getNumber = generateRandomNumber();
   const correctAnswer = boolienToResponse(isPrime(getNumber));
   return [`${getNumber}`, correctAnswer];
 }

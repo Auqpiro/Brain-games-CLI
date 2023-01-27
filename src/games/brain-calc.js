@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../RNG.js';
 
 const rule = 'What is the result of the expression?';
 
@@ -21,14 +21,12 @@ function calculateAnswer(firstOperand, secondOperand, operator) {
 }
 
 function getRound() {
-  const startRange = 1;
-  const endRange = 100;
-  const operand1 = generateRandomNumber(startRange, endRange);
-  const operand2 = generateRandomNumber(startRange, endRange);
+  const firstOperand = generateRandomNumber();
+  const secondOperand = generateRandomNumber();
   const arrayOfOperators = ['+', '-', '*'];
   const operator = arrayOfOperators[generateRandomNumber(0, arrayOfOperators.length - 1)];
-  const correctAnswer = calculateAnswer(operand1, operand2, operator);
-  return [`${operand1} ${operator} ${operand2}`, correctAnswer];
+  const correctAnswer = calculateAnswer(firstOperand, secondOperand, operator);
+  return [`${firstOperand} ${operator} ${secondOperand}`, correctAnswer];
 }
 
 export { rule, getRound };

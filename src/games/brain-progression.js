@@ -1,13 +1,11 @@
 #!/usr/bin/env node
-import { generateRandomNumber } from '../index.js';
+import generateRandomNumber from '../RNG.js';
 
 const rule = 'What number is missing in the progression? ';
 
 function getRound() {
   const arrayProgression = [];
-  const minValue = 1;
-  const maxValue = 100;
-  const firstValueProgression = generateRandomNumber(minValue, maxValue);
+  const firstValueProgression = generateRandomNumber();
   arrayProgression.push(firstValueProgression);
   const minStep = 1;
   const maxStep = 10;
